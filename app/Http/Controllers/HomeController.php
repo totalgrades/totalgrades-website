@@ -38,7 +38,7 @@ class HomeController extends Controller
 
         $users = User::get();
 
-        //$admin_users = User::where('is_admin', '=', 1)->get();
+        $admin_users = User::where('is_admin', '=', 1)->get();
 
         return view('home', compact('jobs', 'contactus', 'users', 'admin_users', 'job_applications'));
     }
